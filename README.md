@@ -1,5 +1,10 @@
 # README
 
+- For each tweet show the name/email (depending on what you track in the User model) of the person who posted the tweet
+- Make that information a link to a profile page showing:
+- Any details about the user
+- A list of all of the tweets (use the same formatting of a tweet you use on your index page. NOTE: a partial might be a help here)
+
 - Add a "search" input in a form to the navbar of your twitter app
 - After each keypress, submit an ajax request to your tweet index page, including the search text.
   - Update the index action to look for a search param (that your form sends)

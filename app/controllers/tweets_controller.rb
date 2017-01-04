@@ -3,7 +3,8 @@ class TweetsController < ApplicationController
 
   # GET /tweets
   def index
-    @tweets = Tweet.all.order("created_at DESC").where(search == tweet.tweet)
+    @tweets = Tweet.all.order("created_at DESC")
+    #.where(search == tweet.tweet)
   end
 
   # GET /tweets/1
