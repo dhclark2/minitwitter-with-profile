@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170104001654) do
+ActiveRecord::Schema.define(version: 20170104002352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "refile_attachments", force: :cascade do |t|
+    t.integer  "oid",        null: false
+    t.string   "namespace",  null: false
+    t.datetime "created_at"
+    t.index ["namespace"], name: "index_refile_attachments_on_namespace", using: :btree
+    t.index ["oid"], name: "index_refile_attachments_on_oid", using: :btree
+  end
 
   create_table "stars", force: :cascade do |t|
     t.integer  "tweet_id"
